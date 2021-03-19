@@ -1,32 +1,10 @@
-const randomWord = require('random-word')
 
-const randIdx = Math.floor(Math.random()*50)
-// console.log(wordSet_1[randIdx] +' '+ wordSet_2[randIdx]+' '+ wordSet_3[randIdx]+' '+wordSet_4[randIdx]) 
-let wordArray = []
+const wordSet_1 = ["Mr", "Mrs", "Miss", "Dr", "Ms"]
+const wordSet_2 = ["Jackie", "Alex", "Jordan", "Blake", "Charlie"]
+const wordSet_3 = ["ran", " walked", "hit", "ate", "jumped"]
+const wordSet_4 = ["slowly", "quickly", "lazily", "blatantly", "accidentally"]
+const wordSet_5 = ["the", "her", "his", "their", "our"]
+const wordSet_6 = ["window", "door", "cat", "dog", "lion"]
 
-const adjectives = []
-const verbs = []
-const nouns = []
-
-let i = 0
-while(i <= 50){
-    let word = randomWord(randIdx)
-    switch(word){
-        case (/ed$/ || /es$/):
-            verbs.push(word)
-            break
-        case (/ing$/):
-            adjectives.push(word)
-            break
-        default:
-            nouns.push(word)
-    }
-    i++
-}
-
-console.log(randomWord(randIdx))
-/* 
-To do:
-1) Using randomWord, sort words into adjectives, nouns, verbs, adverbs and conjunctives
-2) 
-*/
+const randIdx = Math.floor(Math.random()*4)
+console.log(`${wordSet_1[randIdx]} ${wordSet_2[randIdx]} ${wordSet_3[randIdx]} ${wordSet_4[randIdx]} ${wordSet_5[randIdx]} ${wordSet_6[randIdx]}`) 
